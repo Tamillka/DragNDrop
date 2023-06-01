@@ -13,18 +13,6 @@ public class nomesanasVieta : MonoBehaviour, IDropHandler
     public Objekti objectuScripts;
 
 
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
 
     public void OnDrop(PointerEventData eventData)
     {
@@ -65,6 +53,34 @@ public class nomesanasVieta : MonoBehaviour, IDropHandler
                         case "buss":
                             objectuScripts.audioAvots.PlayOneShot(objectuScripts.skanasKoAtskanot[3]);
                             break;
+                        case "cements":
+                            objectuScripts.audioAvots.PlayOneShot(objectuScripts.skanasKoAtskanot[5]);
+                            break;
+                        case "b2":
+                            objectuScripts.audioAvots.PlayOneShot(objectuScripts.skanasKoAtskanot[4]);
+                            break;
+                       
+                        case "46":
+                            objectuScripts.audioAvots.PlayOneShot(objectuScripts.skanasKoAtskanot[6]);
+                            break;
+                        case "61":
+                            objectuScripts.audioAvots.PlayOneShot(objectuScripts.skanasKoAtskanot[7]);
+                            break;
+                        case "eskav":
+                            objectuScripts.audioAvots.PlayOneShot(objectuScripts.skanasKoAtskanot[8]);
+                            break;
+                        case "policka":
+                            objectuScripts.audioAvots.PlayOneShot(objectuScripts.skanasKoAtskanot[9]);
+                            break;
+                        case "traktor1":
+                            objectuScripts.audioAvots.PlayOneShot(objectuScripts.skanasKoAtskanot[10]);
+                            break;
+                        case "traktor5":
+                            objectuScripts.audioAvots.PlayOneShot(objectuScripts.skanasKoAtskanot[11]);
+                            break;
+                        case "uguni":
+                            objectuScripts.audioAvots.PlayOneShot(objectuScripts.skanasKoAtskanot[12]);
+                            break;
                     }
                 }
             }
@@ -75,13 +91,41 @@ public class nomesanasVieta : MonoBehaviour, IDropHandler
                 switch (eventData.pointerDrag.tag)
                 {
                     case "atkritumi":
-                        objectuScripts.atkritumuMasina.GetComponent<RectTransform>().localPosition = objectuScripts.atkrKoord;
+                        objectuScripts.atkritumi.GetComponent<RectTransform>().localPosition = objectuScripts.atkrKoord;
                         break;
                     case "medicina":
                         objectuScripts.atraPalidziba.GetComponent<RectTransform>().localPosition = objectuScripts.atraKord;
                         break;
                     case "buss":
                         objectuScripts.autobuss.GetComponent<RectTransform>().localPosition = objectuScripts.bussKord;
+                        break;
+                    case "cements":
+                        objectuScripts.cementa.GetComponent<RectTransform>().localPosition = objectuScripts.cementaKord;
+                        break;
+                    case "b2":
+                        objectuScripts.b2.GetComponent<RectTransform>().localPosition = objectuScripts.b2Kord;
+                        break;
+                    
+                    case "46":
+                        objectuScripts.e46.GetComponent<RectTransform>().localPosition = objectuScripts.e46Kord;
+                        break;
+                    case "61":
+                        objectuScripts.e61.GetComponent<RectTransform>().localPosition = objectuScripts.e61Kord;
+                        break;
+                    case "eskav":
+                        objectuScripts.eskavators.GetComponent<RectTransform>().localPosition = objectuScripts.eskavatorsKord;
+                        break;
+                    case "policka":
+                        objectuScripts.policija.GetComponent<RectTransform>().localPosition = objectuScripts.policijaKord;
+                        break;
+                    case "traktor1":
+                        objectuScripts.traktors1.GetComponent<RectTransform>().localPosition = objectuScripts.traktors1Kord;
+                        break;
+                    case "traktor5":
+                        objectuScripts.traktors5.GetComponent<RectTransform>().localPosition = objectuScripts.traktors5Kord;
+                        break;
+                    case "uguni":
+                        objectuScripts.uguns.GetComponent<RectTransform>().localPosition = objectuScripts.ugunsKord;
                         break;
                 }
             }
