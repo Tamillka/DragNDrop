@@ -8,7 +8,7 @@ public class Objekti : MonoBehaviour
     public Canvas Canvas;
 
 
-    public GameObject atkritumi;
+    public GameObject atkritumuMasina;
     public GameObject atraPalidziba;
     public GameObject autobuss;
 
@@ -31,7 +31,7 @@ public class Objekti : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        atkrKoord = atkritumi.GetComponent<RectTransform>().localPosition;
+        atkrKoord = atkritumuMasina.GetComponent<RectTransform>().localPosition;
         atraKord = atraPalidziba.GetComponent<RectTransform>().localPosition;
         bussKord = autobuss.GetComponent<RectTransform>().localPosition;
     }

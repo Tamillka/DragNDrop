@@ -75,7 +75,7 @@ public class nomesanasVieta : MonoBehaviour, IDropHandler
                 switch (eventData.pointerDrag.tag)
                 {
                     case "atkritumi":
-                        objectuScripts.atkritumi.GetComponent<RectTransform>().localPosition = objectuScripts.atkrKoord;
+                        objectuScripts.atkritumuMasina.GetComponent<RectTransform>().localPosition = objectuScripts.atkrKoord;
                         break;
                     case "medicina":
                         objectuScripts.atraPalidziba.GetComponent<RectTransform>().localPosition = objectuScripts.atraKord;
