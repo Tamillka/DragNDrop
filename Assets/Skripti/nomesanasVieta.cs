@@ -8,12 +8,19 @@ using UnityEngine.EventSystems;
 public class nomesanasVieta : MonoBehaviour, IDropHandler
 {
     private float vietasZRot, velkObjZRot, rotacijasStarpiba;
+    public int punkti = 0;
     private Vector2 vietasIzm, velkObjIzm;
     private float xIzmeruStarp, yIzmeruStarp;
     public Objekti objectuScripts;
 
 
-
+   // public void beigasPar(bool vertiba) {
+       // if (punkti == 2)
+        //{
+           // izkartne.SetActive(vertiba);
+           // uzvara.SetActive(vertiba);
+      //  }
+   // }
     public void OnDrop(PointerEventData eventData)
     {
         if (eventData.pointerDrag != null)
@@ -33,10 +40,13 @@ public class nomesanasVieta : MonoBehaviour, IDropHandler
                 xIzmeruStarp = Mathf.Abs(velkObjIzm.x - vietasIzm.x);
                 yIzmeruStarp = Mathf.Abs(velkObjIzm.y - vietasIzm.y);
 
+
                 if ((rotacijasStarpiba <= 15 || (rotacijasStarpiba >= 345 && rotacijasStarpiba <= 360)) && (xIzmeruStarp <= 0.2 && yIzmeruStarp <= 0.2))
                 {
+                    objectuScripts.punkti++;
+                    objectuScripts.beigas();
 
-                    objectuScripts.vaiIstajaVieta = true;
+
 
                     eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
                     eventData.pointerDrag.GetComponent<RectTransform>().localRotation = GetComponent<RectTransform>().localRotation;
@@ -59,7 +69,7 @@ public class nomesanasVieta : MonoBehaviour, IDropHandler
                         case "b2":
                             objectuScripts.audioAvots.PlayOneShot(objectuScripts.skanasKoAtskanot[4]);
                             break;
-                       
+
                         case "46":
                             objectuScripts.audioAvots.PlayOneShot(objectuScripts.skanasKoAtskanot[6]);
                             break;
@@ -83,6 +93,7 @@ public class nomesanasVieta : MonoBehaviour, IDropHandler
                             break;
                     }
                 }
+
             }
             else
             {
@@ -105,7 +116,7 @@ public class nomesanasVieta : MonoBehaviour, IDropHandler
                     case "b2":
                         objectuScripts.b2.GetComponent<RectTransform>().localPosition = objectuScripts.b2Kord;
                         break;
-                    
+
                     case "46":
                         objectuScripts.e46.GetComponent<RectTransform>().localPosition = objectuScripts.e46Kord;
                         break;
@@ -129,6 +140,7 @@ public class nomesanasVieta : MonoBehaviour, IDropHandler
                         break;
                 }
             }
+       
         }
     }
 }

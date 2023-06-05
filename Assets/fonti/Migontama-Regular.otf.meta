@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: b73fe4aefa2a8324f88be025c7c25b7f
+timeCreated: 1685980742
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Migontama
+  fontNames:
+  - Migontama
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

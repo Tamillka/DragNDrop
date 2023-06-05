@@ -56,20 +56,30 @@ public class Objekti : MonoBehaviour
     public bool vaiIstajaVieta = false;
     public GameObject pedejaisVilktais = null;
 
+    public GameObject izkartne;
+    public GameObject uzvara;
+    public int punkti;
+
     // Use this for initialization
     void Start()
     {
         atkrKoord = atkritumi.GetComponent<RectTransform>().localPosition;
         atraKord = atraPalidziba.GetComponent<RectTransform>().localPosition;
         bussKord = autobuss.GetComponent<RectTransform>().localPosition;
-        b2Kord = atkritumi.GetComponent<RectTransform>().localPosition;
-        cementaKord = atraPalidziba.GetComponent<RectTransform>().localPosition;
-        e46Kord = autobuss.GetComponent<RectTransform>().localPosition;
-        e61Kord = atkritumi.GetComponent<RectTransform>().localPosition;
-        eskavatorsKord = atraPalidziba.GetComponent<RectTransform>().localPosition;
-        policijaKord = autobuss.GetComponent<RectTransform>().localPosition;
-        traktors1Kord = atkritumi.GetComponent<RectTransform>().localPosition;
-        traktors5Kord = atraPalidziba.GetComponent<RectTransform>().localPosition;
-        ugunsKord = autobuss.GetComponent<RectTransform>().localPosition;
+        b2Kord = b2.GetComponent<RectTransform>().localPosition;
+        cementaKord = cementa.GetComponent<RectTransform>().localPosition;
+        e46Kord = e46.GetComponent<RectTransform>().localPosition;
+        e61Kord = e61.GetComponent<RectTransform>().localPosition;
+        eskavatorsKord = eskavators.GetComponent<RectTransform>().localPosition;
+        policijaKord = policija.GetComponent<RectTransform>().localPosition;
+        traktors1Kord = traktors1.GetComponent<RectTransform>().localPosition;
+        traktors5Kord = traktors5.GetComponent<RectTransform>().localPosition;
+        ugunsKord = uguns.GetComponent<RectTransform>().localPosition;
+    }
+    public void beigas() {
+        if (punkti == 12) {
+            izkartne.SetActive(true);
+            uzvara.SetActive(true);
+        }
     }
 }
