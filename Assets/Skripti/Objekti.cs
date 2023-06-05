@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class Objekti : MonoBehaviour
 {
-
     public Canvas Canvas;
-
 
     public GameObject atkritumi;
     public GameObject atraPalidziba;
@@ -20,7 +18,6 @@ public class Objekti : MonoBehaviour
     public GameObject traktors1;
     public GameObject traktors5;
     public GameObject uguns;
-
 
     [HideInInspector]
     public Vector2 atkrKoord;
@@ -56,8 +53,12 @@ public class Objekti : MonoBehaviour
     public bool vaiIstajaVieta = false;
     public GameObject pedejaisVilktais = null;
 
+
+    //objekti rezultāta paradīšanai
     public GameObject izkartne;
     public GameObject uzvara;
+    public GameObject reset;
+    //mainīgais, kurš skaita punktus (mašīnas uz paraizām vietām)
     public int punkti;
 
     // Use this for initialization
@@ -77,9 +78,11 @@ public class Objekti : MonoBehaviour
         ugunsKord = uguns.GetComponent<RectTransform>().localPosition;
     }
     public void beigas() {
+        //kad visas mašīnas uz vietām, ieslēdz visus objektus, kuri nepieciešami rezultata paradīšanai
         if (punkti == 12) {
             izkartne.SetActive(true);
             uzvara.SetActive(true);
+            reset.SetActive(true);
         }
     }
 }
