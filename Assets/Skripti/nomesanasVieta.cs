@@ -12,6 +12,7 @@ public class nomesanasVieta : MonoBehaviour, IDropHandler
     private Vector2 vietasIzm, velkObjIzm;
     private float xIzmeruStarp, yIzmeruStarp;
     public Objekti objectuScripts;
+    public Timer timeraScripts;
 
     public void OnDrop(PointerEventData eventData)
     {
@@ -35,7 +36,7 @@ public class nomesanasVieta : MonoBehaviour, IDropHandler
 
                 if ((rotacijasStarpiba <= 15 || (rotacijasStarpiba >= 345 && rotacijasStarpiba <= 360)) && (xIzmeruStarp <= 0.2 && yIzmeruStarp <= 0.2))
                 {
-                    objectuScripts.punkti++;   //pievieno punktu, ja mašīna uz vietas               
+                    timeraScripts.punkti++;   //pievieno punktu, ja mašīna uz vietas               
 
                     eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
                     eventData.pointerDrag.GetComponent<RectTransform>().localRotation = GetComponent<RectTransform>().localRotation;
@@ -82,7 +83,7 @@ public class nomesanasVieta : MonoBehaviour, IDropHandler
                             objectuScripts.audioAvots.PlayOneShot(objectuScripts.skanasKoAtskanot[12]);
                             break;
                     }
-                    objectuScripts.beigas(); //iszauc metodi, lai parbaudīt pareizo mašīnu skaitu
+                    timeraScripts.beigas(); //iszauc metodi, lai parbaudīt pareizo mašīnu skaitu
                 }
 
             }

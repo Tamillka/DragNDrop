@@ -52,18 +52,22 @@ public class Objekti : MonoBehaviour
     [HideInInspector]
     public bool vaiIstajaVieta = false;
     public GameObject pedejaisVilktais = null;
+    public Timer timeraScripts;
 
 
-    //objekti rezultāta paradīšanai
-    public GameObject izkartne;
-    public GameObject uzvara;
-    public GameObject reset;
-    //mainīgais, kurš skaita punktus (mašīnas uz paraizām vietām)
-    public int punkti;
+   
 
     // Use this for initialization
     void Start()
     {
+        timeraScripts.izkartne.SetActive(false);
+        timeraScripts.uzvara.SetActive(false);
+        timeraScripts.reset.SetActive(false);
+        timeraScripts.laikaPar.SetActive(false);
+        timeraScripts.zvaigznes1.SetActive(false);
+        timeraScripts.zvaigznes2.SetActive(false);
+        timeraScripts.zvaigznes3.SetActive(false);
+
         atkrKoord = atkritumi.GetComponent<RectTransform>().localPosition;
         atraKord = atraPalidziba.GetComponent<RectTransform>().localPosition;
         bussKord = autobuss.GetComponent<RectTransform>().localPosition;
@@ -77,12 +81,5 @@ public class Objekti : MonoBehaviour
         traktors5Kord = traktors5.GetComponent<RectTransform>().localPosition;
         ugunsKord = uguns.GetComponent<RectTransform>().localPosition;
     }
-    public void beigas() {
-        //kad visas mašīnas uz vietām, ieslēdz visus objektus, kuri nepieciešami rezultata paradīšanai
-        if (punkti == 12) {
-            izkartne.SetActive(true);
-            uzvara.SetActive(true);
-            reset.SetActive(true);
-        }
-    }
+  
 }
