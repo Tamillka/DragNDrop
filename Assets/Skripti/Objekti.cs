@@ -52,14 +52,14 @@ public class Objekti : MonoBehaviour
     [HideInInspector]
     public bool vaiIstajaVieta = false;
     public GameObject pedejaisVilktais = null;
+    //pievieno taimera skriptu, lai izmantot no tā vajadzīgus objektus
     public Timer timeraScripts;
 
-
-   
 
     // Use this for initialization
     void Start()
     {
+        //paslēpt visus liekos objektus, kuri parādās tikai spēles beigās
         timeraScripts.izkartne.SetActive(false);
         timeraScripts.uzvara.SetActive(false);
         timeraScripts.reset.SetActive(false);

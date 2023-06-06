@@ -12,6 +12,7 @@ public class nomesanasVieta : MonoBehaviour, IDropHandler
     private Vector2 vietasIzm, velkObjIzm;
     private float xIzmeruStarp, yIzmeruStarp;
     public Objekti objectuScripts;
+    //pievieno taimera skriptu, lai izmantot no tā vajadzīgus objektus
     public Timer timeraScripts;
 
     public void OnDrop(PointerEventData eventData)
@@ -85,7 +86,6 @@ public class nomesanasVieta : MonoBehaviour, IDropHandler
                     }
                     timeraScripts.beigas(); //iszauc metodi, lai parbaudīt pareizo mašīnu skaitu
                 }
-
             }
             else
             {
@@ -108,7 +108,6 @@ public class nomesanasVieta : MonoBehaviour, IDropHandler
                     case "b2":
                         objectuScripts.b2.GetComponent<RectTransform>().localPosition = objectuScripts.b2Kord;
                         break;
-
                     case "46":
                         objectuScripts.e46.GetComponent<RectTransform>().localPosition = objectuScripts.e46Kord;
                         break;
@@ -132,7 +131,6 @@ public class nomesanasVieta : MonoBehaviour, IDropHandler
                         break;
                 }
             }
-       
         }
     }
 }
